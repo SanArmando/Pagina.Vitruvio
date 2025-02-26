@@ -4,7 +4,7 @@
 /* Variables globales */
 :root {
     --color-primario: #1d3557;
-    --color-secundario: #e63946;
+    --color-secundario: #0509f3;
     --color-texto: #333;
     --color-fondo: #f1faee;
     --color-hover: #457b9d;
@@ -27,8 +27,8 @@ body {
 
 /* Estilos de encabezado */
 .header {
-    background: url('imagenes/header-bg.jpg') center/cover no-repeat;
-    color: white;
+    background: url('imagenes/bg.png') center/cover no-repeat;
+    color: rgb(252, 252, 253);
     text-align: center;
     padding: 5rem 0;
 }
