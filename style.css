@@ -11,12 +11,26 @@
     --fuente-principal: 'Poppins', sans-serif;
 }
 
+
+
+
+
 /* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--fuente-principal);
+}
+
+.menu {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #1d3557;
+    padding: 15px 0;
+    transition: top 0.3s;
 }
 
 body {
