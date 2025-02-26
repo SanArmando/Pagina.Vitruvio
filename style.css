@@ -1,0 +1,226 @@
+/* Importar tipografía similar */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Variables globales */
+:root {
+    --color-primario: #1d3557;
+    --color-secundario: #e63946;
+    --color-texto: #333;
+    --color-fondo: #f1faee;
+    --color-hover: #457b9d;
+    --fuente-principal: 'Poppins', sans-serif;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fuente-principal);
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* Estilos de encabezado */
+.header {
+    background: url('imagenes/header-bg.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.header .logo {
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-fondo);
+    text-decoration: none;
+}
+
+.header-txt h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.header-txt p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn-1 {
+    display: inline-block;
+    background: var(--color-secundario);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-1:hover {
+    background: var(--color-hover);
+}
+
+/* Menú de navegación */
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--color-primario);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover {
+    color: var(--color-secundario);
+}
+
+/* Sección General */
+.general {
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.general h2 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 2rem;
+}
+
+.general-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.txt {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.txt:hover {
+    transform: translateY(-5px);
+}
+
+/* Sección de información */
+.info-1, .info-2 {
+    background: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.info-circle {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.circle-txt {
+    text-align: center;
+    max-width: 200px;
+}
+
+.circle-1 {
+    background: var(--color-secundario);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Sección de Testimonios */
+.testi {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.testi .txt {
+    max-width: 300px;
+    text-align: center;
+}
+
+.testi img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Formulario de contacto */
+.footer {
+    background: var(--color-primario);
+    color: white;
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.campo {
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-2 {
+    background: var(--color-secundario);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn-2:hover {
+    background: var(--color-hover);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .general-content {
+        grid-template-columns: 1fr;
+    }
+}
