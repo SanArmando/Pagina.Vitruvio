@@ -4,7 +4,7 @@
 /* Variables globales */
 :root {
     --color-primario: #1d3557;
-    --color-secundario: #0509f3;
+    --color-secundario: #05bcf3;
     --color-texto: #333;
     --color-fondo: #f1faee;
     --color-hover: #457b9d;
@@ -128,7 +128,7 @@ body {
 }
 
 .txt {
-    background: rgb(4, 177, 245);
+    background: rgb(116, 206, 241);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
