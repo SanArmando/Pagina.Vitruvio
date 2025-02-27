@@ -203,10 +203,12 @@ body {
 
 
 .info-2 {
-    background: var(--color-primario);
+    background-image: url('imagenes/bg3.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: rgb(255, 254, 254);
-    text-align: center;
-    padding: 3rem 2rem;
+    border: 100% solid transparent;
 }
 
 
