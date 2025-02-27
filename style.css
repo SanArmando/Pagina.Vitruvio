@@ -233,6 +233,32 @@ body {
     font-weight: bold;
 }
 
+/* ESTILOS PARA TESTIMONIOS */
+.testi-slider {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.testi-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testi-slide {
+    min-width: 100%;
+    text-align: center;
+    display: none;
+    padding: 20px;
+
+}
+
+.testi-slide.active {
+    display: block;
+}
+
 /* Sección de Testimonios */
 .testi {
     display: flex;
@@ -268,6 +294,42 @@ body {
 .testi-slide {
     min-width: 100%;
     text-align: center;
+}
+
+/* FORMULARIO DE CONTACTO */
+.footer {
+    background: #1d3557;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.footer form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-2 {
+    background: #457b9d;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.btn-2:hover {
+    background: #0a4a7a;
 }
 
 /* MODO OSCURO */
