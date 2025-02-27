@@ -37,7 +37,7 @@ body {
     top: 0;
     left: 0;
     background: #1d3557;
-    padding: 15px;
+    padding: 0.5rem 1rem;
     transition: top 0.3s;
 }
 
