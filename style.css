@@ -279,21 +279,60 @@ body {
     margin-bottom: 1rem;
 }
 
-/* CARRUSEL DE TESTIMONIOS */
-.testi-slider {
-    overflow: hidden;
-    max-width: 500px;
-    margin: auto;
-}
-
-.testi-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.testi-slide {
-    min-width: 100%;
+/* SECCIÓN TESTIMONIOS (IGUAL A PROPIEDADES) */
+.testimonios {
     text-align: center;
+    padding: 3rem 2rem;
+}
+
+.testimonios h2 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom: 2rem;
+}
+
+.testimonios-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.testimonio {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonio:hover {
+    transform: translateY(-5px);
+}
+
+.testimonio img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.testimonio h3 {
+    font-size: 1.2rem;
+    color: var(--color-primario);
+}
+
+.testimonio p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* HACER RESPONSIVO */
+@media (max-width: 768px) {
+    .testimonios-content {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* FORMULARIO DE CONTACTO */
