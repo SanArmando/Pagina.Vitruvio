@@ -11,7 +11,14 @@
     --fuente-principal: 'Poppins', sans-serif;
 }
 
-
+/* Estilos Generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f1faee;
+    color: #333;
+}
 
 
 
@@ -23,15 +30,30 @@
     font-family: var(--fuente-principal);
 }
 
+/* MENÚ FIJO */
 .menu {
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     background: #1d3557;
-    padding: 15px 0;
+    padding: 15px;
     transition: top 0.3s;
 }
+
+/* ANIMACIONES AL HACER SCROLL */
+.txt, .testi-slide {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
 
 body {
     background-color: var(--color-fondo);
@@ -42,6 +64,11 @@ body {
 /* Estilos de encabezado */
 .header {
     background: url('imagenes/vitruvio.jpg') center/cover no-repeat;
+    background-origin: no-repeat;
+    background-size: cover;
+    background-position: center;
+    -webkit-transition-duration: 1s; 
+    transition-duration: 1s;
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 5rem 0;
@@ -115,6 +142,31 @@ body {
     padding: 3rem 2rem;
 }
 
+.general {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.general-content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+.general-1 {
+    background-image: url(imagenes/casa-1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.general-2 {
+    background-image: url(imagenes/casa-2.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .general h2 {
     font-size: 2rem;
     color: var(--color-primario);
@@ -128,7 +180,7 @@ body {
 }
 
 .txt {
-    background: rgb(116, 206, 241);
+    background: rgb(80, 227, 247);
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -140,12 +192,24 @@ body {
 }
 
 /* Sección de información */
-.info-1, .info-2 {
-    background: var(--color-primario);
+.info-1 {
+    background-image: url('imagenes/zona-2.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: rgb(255, 255, 255);
+    border: 100% solid transparent;
+}
+
+
+.info-2 {
+    background: var(--color-primario);
+    color: rgb(255, 254, 254);
     text-align: center;
     padding: 3rem 2rem;
 }
+
+
 
 .info-circle {
     display: flex;
@@ -162,7 +226,7 @@ body {
 
 .circle-1 {
     background: var(--color-secundario);
-    color: rgb(255, 255, 255);
+    color: rgb(255, 253, 253);
     padding: 1.5rem;
     border-radius: 50%;
     font-size: 1.5rem;
@@ -189,39 +253,34 @@ body {
     margin-bottom: 1rem;
 }
 
-/* Formulario de contacto */
-.footer {
-    background: var(--color-primario);
-    color: rgb(253, 252, 252);
-    text-align: center;
-    padding: 3rem 2rem;
+/* CARRUSEL DE TESTIMONIOS */
+.testi-slider {
+    overflow: hidden;
+    max-width: 500px;
+    margin: auto;
 }
 
-.footer form {
+.testi-container {
     display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
+    transition: transform 0.5s ease-in-out;
 }
 
-.campo {
-    padding: 0.8rem;
-    border-radius: 5px;
-    border: none;
-    font-size: 1rem;
+.testi-slide {
+    min-width: 100%;
+    text-align: center;
 }
 
-.btn-2 {
-    background: var(--color-secundario);
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    transition: background 0.3s ease-in-out;
+/* MODO OSCURO */
+body.dark-mode {
+    background: #121212;
+    color: #fff;
 }
 
-.btn-2:hover {
-    background: var(--color-hover);
+.dark-mode .menu {
+    background: #222;
 }
+
+
 
 /* Responsive */
 @media (max-width: 768px) {

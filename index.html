@@ -15,6 +15,8 @@
     <header class="header">
         <div class="menu container">
             <a href="#" class="logo">Vitruvio</a>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icono">&#9776;</label>
             <nav class="navbar">
                 <ul>
                     <li><a href="#">Inicio</a></li>
@@ -23,6 +25,7 @@
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </nav>
+            <button id="dark-mode-toggle">🌙</button>
         </div>
 
         <div class="header-content container">
@@ -52,7 +55,7 @@
                 <p>Entorno natural con amplios espacios y diseño arquitectónico único.</p>
             </div>
             <div class="txt">
-                <h3>Casa campestre</h3>
+                <h3>Terreno residencial</h3>
                 <p>Entorno natural con amplios espacios y zonas verdes únicas.</p>
         </div>
     </section>
@@ -102,29 +105,27 @@
         </div>
     </section>
 
-    <section class="info-2">
-        <div class="info-content container">
-            <h2>Lo que dicen nuestros clientes</h2>
-            <div class="testi">
-                <div class="testi-left">
-                    <div class="txt">
-                        <img src="imagenes/t1.png" alt="Cliente 1">
+    <!-- SECCIÓN: TESTIMONIOS -->
+    <section class="testi-slider">
+        <h2>Testimonios</h2>
+        <div class="testi-container">
+            <div class="testi-slide">
+                <img src="imagenes/t1.png" alt="Cliente 1">
                         <h3>Luisa Ramírez</h3>
                         <p>“Excelente servicio y asesoramiento. Encontré la casa de mis sueños.”</p>
                     </div>
-                    <div class="txt">
+                    <div class="testi-slide">
                         <img src="imagenes/t2.png" alt="Cliente 2">
                         <h3>Fredi Fernández</h3>
                         <p>“Increíble experiencia de arrendamiento, totalmente recomendado.”</p>
                     </div>
                 </div>
-                <div class="testi-right">
-                    <div class="txt">
+                <div class="testi-slide">
                         <img src="imagenes/montañero.jpg" alt="Cliente 3">
                         <h3>Martín Gómez</h3>
                         <p>“Atención personalizada y soluciones adaptadas a mis necesidades.”</p>
                     </div>
-                    <div class="txt">
+                    <div class="testi-slide">
                         <img src="imagenes/t3.png" alt="Cliente 4">
                         <h3>Laura Fernández</h3>
                         <p>“Increíble experiencia de compra, totalmente recomendado.”</p>
@@ -134,7 +135,7 @@
         </div>
     </section>
 
-    <footer class="footer container">
+    <footer class="footer container" id="contacto">
         <h2>Contacto</h2>
         <form>
             <input class="campo" type="text" placeholder="Nombre" required>
@@ -142,10 +143,10 @@
             <textarea class="campo" placeholder="Mensaje" required></textarea>
             <input class="btn-2 campo" type="submit" value="Enviar">
         </form>
-        <div class="footer-txt">
-            <p>&copy; 2025 Inmobiliaria Vitruvio. Todos los derechos reservados.</p>
-        </div>
+        <p>&copy; 2025 Inmobiliaria Vitruvio. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
