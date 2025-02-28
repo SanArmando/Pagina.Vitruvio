@@ -63,13 +63,13 @@ body {
 
 /* Estilos de encabezado */
 .header {
-    background: url('imagenes/vitruvio.jpg') center/cover no-repeat;
+    background: url('imagenes/zona-1.jpeg') center/cover no-repeat;
     background-origin: no-repeat;
     background-size: cover;
     background-position: center;
     -webkit-transition-duration: 1s; 
     transition-duration: 1s;
-    color: rgb(0, 0, 0);
+    color: rgb(248, 244, 244);
     text-align: center;
     padding: 5rem 0;
 }
