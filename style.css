@@ -3,7 +3,7 @@
 
 /* Variables globales */
 :root {
-    --color-primario: #1d3557;
+    --color-primario: #5895eb;
     --color-secundario: #05bcf3;
     --color-texto: #333;
     --color-fondo: #f1faee;
@@ -339,7 +339,7 @@ body {
 
 /* FORMULARIO DE CONTACTO */
 .footer {
-    background: #1d3557;
+    background: #5895eb;
     color: white;
     text-align: center;
     padding: 40px 20px;
@@ -370,7 +370,7 @@ body {
 }
 
 .btn-2:hover {
-    background: #0a4a7a;
+    background: #5895eb;
 }
 
 /* MODO OSCURO */
