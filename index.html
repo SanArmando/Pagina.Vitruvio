@@ -35,46 +35,35 @@
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
-        </div>
-
-        <div class="header-content container">
-            <div class="header-txt">
-                <h1>Inmobiliaria Vitruvio S A S</h1>
-                <p>
-                    Ofrecemos las mejores propiedades con el mejor servicio. Descubre oportunidades únicas para invertir o encontrar tu hogar ideal.
-                </p>
-                <a href="#" class="btn-1">Más información</a>
-            </div>
         </div>
     </header>
 
     <section class="general container">
         <h2>Propiedades</h2>
-        <div class="general-content">
-            <div class="property">
-                <a href="propiedad1.html">
-                    <img src="imagenes/casa-1-thumb.jpg" alt="Casa de lujo">
-                    <h3>Casa de lujo</h3>
-                </a>
+        <div class="propiedades-content">
+            <div class="propiedad">
+                <img src="imagenes/casa-1-thumb.jpg" alt="Casa de lujo">
+                <h3>Casa de lujo</h3>
+                <p>Descripción breve de la casa de lujo.</p>
+                <a href="propiedad1.html" class="btn">Ver más</a>
             </div>
-            <div class="property">
-                <a href="propiedad2.html">
-                    <img src="imagenes/casa-2-thumb.jpg" alt="Casa moderna">
-                    <h3>Casa moderna</h3>
-                </a>
+            <div class="propiedad">
+                <img src="imagenes/casa-2-thumb.jpg" alt="Casa moderna">
+                <h3>Casa moderna</h3>
+                <p>Descripción breve de la casa moderna.</p>
+                <a href="propiedad2.html" class="btn">Ver más</a>
             </div>
-            <div class="property">
-                <a href="propiedad3.html">
-                    <img src="imagenes/casa-3-thumb.jpg" alt="Casa clásica">
-                    <h3>Casa clásica</h3>
-                </a>
+            <div class="propiedad">
+                <img src="imagenes/casa-3-thumb.jpg" alt="Casa clásica">
+                <h3>Casa clásica</h3>
+                <p>Descripción breve de la casa clásica.</p>
+                <a href="propiedad3.html" class="btn">Ver más</a>
             </div>
-            <div class="property">
-                <a href="propiedad4.html">
-                    <img src="imagenes/casa-4-thumb.jpg" alt="Casa contemporánea">
-                    <h3>Casa contemporánea</h3>
-                </a>
+            <div class="propiedad">
+                <img src="imagenes/casa-4-thumb.jpg" alt="Casa contemporánea">
+                <h3>Casa contemporánea</h3>
+                <p>Descripción breve de la casa contemporánea.</p>
+                <a href="propiedad4.html" class="btn">Ver más</a>
             </div>
         </div>
     </section>
@@ -202,11 +191,6 @@
         });
     </script>
     <script>
-        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
-    <script>
         function openModal(modalId) {
             document.getElementById(modalId).style.display = "block";
         }
@@ -233,6 +217,11 @@
             } else {
                 menuItems.style.display = 'block';
             }
+        }
+
+        // Modo nocturno automático
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.classList.add('dark-mode');
         }
     </script>
 

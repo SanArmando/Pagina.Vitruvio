@@ -6,6 +6,8 @@
     --color-fondo: #87CEEB; /* Azul cielo */
     --color-texto: #333;
     --color-hover: #457b9d;
+    --color-primario: #2c3e50;
+    --color-secundario: #2980b9;
     --fuente-principal: 'Poppins', sans-serif;
 }
 
@@ -32,14 +34,29 @@ body {
 }
 
 /* MENÚ FIJO */
-.menu {
-    background-color: #333;
-    overflow: hidden;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--color-fondo);
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    padding: 0.1rem 0.5rem;
-    transition: top 0.3s;
+    z-index: 1000;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.menu {
+    background-color: transparent;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .menu ul {
@@ -50,7 +67,6 @@ body {
 }
 
 .menu ul li {
-    float: left;
     margin: 0;
 }
 
@@ -524,31 +540,46 @@ body.dark-mode .btn-1 {
     color: var(--color-texto);
 }
 
-/* Estilos para los detalles de la propiedad */
-.property-details {
-    margin: 2rem 0;
+/* Estilos para la sección "Nuestro equipo" */
+.equipo {
+    text-align: center;
+    padding: 3rem 2rem;
 }
 
-.property-details h2 {
+.equipo h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.property-details p {
-    font-size: 1.2rem;
+    color: var(--color-texto);
     margin-bottom: 2rem;
 }
 
-.property-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+.equipo-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
 }
 
-.property-images img {
-    width: calc(50% - 1rem);
-    height: auto;
-    border-radius: 5px;
+.equipo-miembro {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.equipo-miembro:hover {
+    transform: translateY(-5px);
+}
+
+.equipo-miembro h3 {
+    font-size: 1.2rem;
+    color: var(--color-primario);
+}
+
+.equipo-miembro p {
+    font-size: 1rem;
+    color: #333;
 }
 
 /* Estilos para los botones */
@@ -677,6 +708,59 @@ body.dark-mode .btn-1 {
     cursor: pointer;
 }
 
+/* Estilos para las propiedades */
+.propiedades-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 3rem 2rem;
+}
+
+.propiedad {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.propiedad:hover {
+    transform: translateY(-5px);
+}
+
+.propiedad img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.propiedad h3 {
+    font-size: 1.2rem;
+    color: var(--color-primario);
+}
+
+.propiedad p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.propiedad .btn {
+    margin-top: 1rem;
+    background: var(--color-secundario);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.propiedad .btn:hover {
+    background: var(--color-hover);
+}
+
 /* Estilos para la sección "Nuestro equipo" */
 .equipo {
     text-align: center;
@@ -717,4 +801,130 @@ body.dark-mode .btn-1 {
 .equipo-miembro p {
     font-size: 1rem;
     color: #333;
+}
+
+/* Estilos para los botones */
+.btn {
+    display: inline-block;
+    background: var(--color-secundario);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: var(--color-hover);
+}
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+    margin: 2rem 0;
+}
+
+.contact-form h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    align-self: flex-start;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .menu {
+    background-color: #444;
+}
+
+body.dark-mode .btn-1 {
+    background-color: #666;
+}
+
+/* Menú oculto */
+.hidden {
+    top: -100px; /* Ajusta este valor según la altura de tu menú */
+    transition: top 0.3s;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .general-content {
+        grid-template-columns: 1fr;
+    }
+
+    .equipo .txt {
+        flex: 1 1 100%;
+    }
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
