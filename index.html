@@ -7,7 +7,8 @@
     <title>Inmobiliaria Vitruvio S A S</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
@@ -42,23 +43,40 @@
     <section class="general container">
         <h2>Propiedades</h2>
         <div class="general-content">
-            <div class="txt">
-                <h3>Casa de lujo</h3>
-                <p>Exclusiva propiedad con vista al mar y acabados de alta gama.</p>
+            <div class="property">
+                <a href="propiedad1.html">
+                    <img src="imagenes/casa-1-thumb.jpg" alt="Casa 1">
+                    <h3>Casa de lujo</h3>
+                </a>
             </div>
-            <div class="txt">
-                <h3>Apartamento moderno</h3>
-                <p>Ubicación privilegiada en el centro de la ciudad, con todas las comodidades.</p>
+            <div class="property">
+                <a href="propiedad2.html">
+                    <img src="imagenes/casa-2-thumb.jpg" alt="Casa 2">
+                    <h3>Casa moderna</h3>
+                </a>
             </div>
-            <div class="txt">
-                <h3>Villa campestre</h3>
-                <p>Entorno natural con amplios espacios y diseño arquitectónico único.</p>
-            </div>
-            <div class="txt">
-                <h3>Terreno residencial</h3>
-                <p>Entorno natural con amplios espacios y zonas verdes únicas.</p>
+            <!-- Más propiedades -->
         </div>
     </section>
+
+    <!-- Modales para mostrar información adicional -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h2>Casa de lujo</h2>
+            <img src="imagenes/casa-1.jpg" alt="Casa 1">
+            <p>Descripción detallada de la casa de lujo.</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>Casa moderna</h2>
+            <img src="imagenes/casa-2.jpg" alt="Casa 2">
+            <p>Descripción detallada de la casa moderna.</p>
+        </div>
+    </div>
 
     <section class="info-1">
         <div class="info-content container">
@@ -86,7 +104,7 @@
 
     <section class="general g2 container">
         <h2>Nuestro equipo</h2>
-        <div class="general-content">
+        <div class="general-content
             <div class="txt">
                 <h3>Ana López</h3>
                 <p>Especialista en ventas y asesoramiento inmobiliario.</p>
@@ -132,6 +150,12 @@
         </div>
     </section>
 
+    <div class="gallery">
+        <a href="imagenes/casa-1.jpg" data-lightbox="gallery"><img src="imagenes/casa-1-thumb.jpg" alt="Casa 1"></a>
+        <a href="imagenes/casa-2.jpg" data-lightbox="gallery"><img src="imagenes/casa-2-thumb.jpg" alt="Casa 2"></a>
+        <!-- Más imágenes -->
+    </div>
+
     <footer class="footer container" id="contacto">
         <h2>Contacto</h2>
         <form>
@@ -144,6 +168,59 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var lastScrollTop = 0;
+            var menu = document.querySelector(".menu");
+
+            window.addEventListener("scroll", function() {
+                var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (scrollTop > lastScrollTop) {
+                    // Scroll hacia abajo
+                    menu.classList.add("hidden");
+                } else {
+                    // Scroll hacia arriba
+                    menu.classList.remove("hidden");
+                }
+
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('dark-mode-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Cerrar el modal cuando el usuario hace clic fuera del contenido del modal
+        window.onclick = function(event) {
+            var modals = document.getElementsByClassName('modal');
+            for (var i = 0; i < modals.length; i++) {
+                if (event.target == modals[i]) {
+                    modals[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>
+.hidden {
+    top: -100px; /* Ajusta este valor según la altura de tu menú */
+    transition: top 0.3s;
+}
