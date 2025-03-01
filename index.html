@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>Inmobiliaria Vitruvio S A S</title>
+    <title>Vitruvio Inmobiliaria</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         .hidden {
             top: -100px; /* Ajusta este valor según la altura de tu menú */
@@ -20,16 +21,24 @@
 <body>
 
     <header class="header">
-        <div class="menu container">
-            <a href="#" class="logo">Vitruvio</a>
-            <input type="checkbox" id="menu-toggle">
-            <label for="menu-toggle" class="menu-icono">&#9776;</label>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Propiedades</a></li>
-                    <li><a href="#">Nuestro equipo</a></li>
-                    <li><a href="#">Contacto</a></li>
+        <div class="header-content container">
+            <h1>Vitruvio Inmobiliaria</h1>
+            <nav class="menu">
+                <div class="menu-icon" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul id="menu-items">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="propiedades.html">Propiedades</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Servicios</a>
+                        <div class="dropdown-content">
+                            <a href="servicio1.html">Servicio 1</a>
+                            <a href="servicio2.html">Servicio 2</a>
+                            <a href="servicio3.html">Servicio 3</a>
+                        </div>
+                    </li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
             <button id="dark-mode-toggle">🌙</button>
@@ -172,6 +181,7 @@
         <a href="imagenes/casa-2.jpg" data-lightbox="gallery"><img src="imagenes/casa-2-thumb.jpg" alt="Casa 2"></a>
         <!-- Más imágenes -->
     </div>
+    
 
     <footer class="footer container" id="contacto">
         <h2>Contacto</h2>
@@ -181,7 +191,7 @@
             <textarea class="campo" placeholder="Mensaje" required></textarea>
             <button type="submit" class="btn-2 campo">Enviar</button>
         </form>
-        <p>&copy; 2025 Inmobiliaria Vitruvio. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Vitruvio Inmobiliaria. Todos los derechos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
@@ -231,6 +241,16 @@
                 if (event.target == modals[i]) {
                     modals[i].style.display = "none";
                 }
+            }
+        }
+    </script>
+    <script>
+        function toggleMenu() {
+            var menuItems = document.getElementById('menu-items');
+            if (menuItems.style.display === 'block') {
+                menuItems.style.display = 'none';
+            } else {
+                menuItems.style.display = 'block';
             }
         }
     </script>
