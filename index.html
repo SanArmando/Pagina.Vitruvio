@@ -6,16 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Vitruvio Inmobiliaria</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        .hidden {
-            top: -100px; /* Ajusta este valor según la altura de tu menú */
-            transition: top 0.3s;
-        }
-    </style>
 </head>
 
 <body>
@@ -24,7 +18,7 @@
         <div class="header-content container">
             <h1>Vitruvio Inmobiliaria</h1>
             <nav class="menu">
-                <div class="menu-icon" onclick="toggleMenu()">
+                <div class="menu-icon" onclick="toggleMenu()" aria-label="Toggle menu">
                     <i class="fas fa-bars"></i>
                 </div>
                 <ul id="menu-items">
@@ -41,7 +35,7 @@
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
-            <button id="dark-mode-toggle">🌙</button>
+            <button id="dark-mode-toggle" aria-label="Toggle dark mode">🌙</button>
         </div>
 
         <div class="header-content container">
@@ -60,49 +54,30 @@
         <div class="general-content">
             <div class="property">
                 <a href="propiedad1.html">
-                    <img src="imagenes/casa-1-thumb.jpg" alt="Casa 1">
+                    <img src="imagenes/casa-1-thumb.jpg" alt="Casa de lujo">
                     <h3>Casa de lujo</h3>
                 </a>
             </div>
             <div class="property">
                 <a href="propiedad2.html">
-                    <img src="imagenes/casa-2-thumb.jpg" alt="Casa 2">
+                    <img src="imagenes/casa-2-thumb.jpg" alt="Casa moderna">
                     <h3>Casa moderna</h3>
                 </a>
             </div>
             <div class="property">
                 <a href="propiedad3.html">
-                    <img src="imagenes/casa-3-thumb.jpg" alt="Casa 3">
+                    <img src="imagenes/casa-3-thumb.jpg" alt="Casa clásica">
                     <h3>Casa clásica</h3>
                 </a>
             </div>
             <div class="property">
                 <a href="propiedad4.html">
-                    <img src="imagenes/casa-4-thumb.jpg" alt="Casa 4">
+                    <img src="imagenes/casa-4-thumb.jpg" alt="Casa contemporánea">
                     <h3>Casa contemporánea</h3>
                 </a>
             </div>
         </div>
     </section>
-
-    <!-- Modales para mostrar información adicional -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h2>Casa de lujo</h2>
-            <img src="imagenes/casa-1.jpg" alt="Casa 1">
-            <p>Descripción detallada de la casa de lujo.</p>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h2>Casa moderna</h2>
-            <img src="imagenes/casa-2.jpg" alt="Casa 2">
-            <p>Descripción detallada de la casa moderna.</p>
-        </div>
-    </div>
 
     <section class="info-1">
         <div class="info-content container">
@@ -128,9 +103,9 @@
         </div>
     </section>
 
-    <section class="general g2 container">
+    <section class="equipo container">
         <h2>Nuestro equipo</h2>
-        <div class="general-content
+        <div class="equipo-content">
             <div class="txt">
                 <h3>Ana López</h3>
                 <p>Especialista en ventas y asesoramiento inmobiliario.</p>
@@ -144,12 +119,20 @@
                 <p>Agente inmobiliaria con enfoque en inversión y financiamiento.</p>
             </div>
             <div class="txt">
-                <h4>María Albarez</h4>
+                <h3>María Álvarez</h3>
                 <p>Agente inmobiliaria con enfoque en recursos humanos.</p>
+            </div>
+            <div class="txt">
+                <h3>Juan Martínez</h3>
+                <p>Gerente de proyectos con 15 años de experiencia en el sector inmobiliario.</p>
+            </div>
+            <div class="txt">
+                <h3>Laura Fernández</h3>
+                <p>Especialista en marketing y comunicación.</p>
+            </div>
         </div>
     </section>
 
-    <!-- SECCIÓN TESTIMONIOS MEJORADA -->
     <section class="testimonios container">
         <h2>Lo que dicen nuestros clientes</h2>
         <div class="testimonios-content">
@@ -181,7 +164,6 @@
         <a href="imagenes/casa-2.jpg" data-lightbox="gallery"><img src="imagenes/casa-2-thumb.jpg" alt="Casa 2"></a>
         <!-- Más imágenes -->
     </div>
-    
 
     <footer class="footer container" id="contacto">
         <h2>Contacto</h2>
@@ -194,9 +176,8 @@
         <p>&copy; 2025 Vitruvio Inmobiliaria. Todos los derechos reservados.</p>
     </footer>
 
-    <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
     <script>
         AOS.init();
     </script>
